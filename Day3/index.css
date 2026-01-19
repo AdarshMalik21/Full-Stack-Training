@@ -1,0 +1,127 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bgg: #f5f5f5;
+}
+
+body {
+  font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+  margin: 0;
+}
+
+.page {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: 0.3s;
+  min-height: 100vh;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  
+  
+}
+.portfolio_name{
+  font-size: 28px;
+}
+nav{
+  align-self: center;
+  
+}
+a{
+  display: inline-block;
+  color: black
+}
+
+a:hover{
+  border: 2px solid #228B22;
+  border-radius: 10px;
+  padding: 2px 6px;
+  color:blanchedalmond
+}
+.main_section{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap:20px;
+  max-width: 1200px;
+  margin:0 auto;
+
+}
+.childs{
+  flex: 1 1 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--card-bgg);
+}
+/* .childs.third{
+  flex-shrink: 5;
+} */
+img{
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+footer_para{
+  align-self: center;
+}
+.first{
+  background-color: #228B22;
+}
+.second{
+  background-color: aquamarine;
+}
+.third{
+  background-color: bisque;
+}
+.fourth{
+  background-color: aliceblue;
+}
+#theme-toggle:checked ~ .page {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --card-bgg: #1e1e1e;
+}
+#theme-toggle {
+  display: none;
+}
+
+.theme-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
+  padding: 8px 12px;
+  background: #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+.hamburger {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 1024px) {
+
+  nav {
+    display: none;  
+  }
+
+  .hamburger {
+    display: block; 
+  }
+
+}

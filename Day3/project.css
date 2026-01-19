@@ -1,0 +1,31 @@
+
+.UseGrid{
+    display: grid;
+    background-color: aqua;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap: 12px;
+    
+}
+
+.hello{
+ background-color: blueviolet;
+ 
+}
+.world{
+    background-color: brown;
+    
+}
+.start{
+    background-color: burlywood;
+}
+.noida{
+    background-color: blue;
+}
+.delhi{
+    background-color: antiquewhite;
+    
+}
+.india{
+     background-color: azure;
+     
+}

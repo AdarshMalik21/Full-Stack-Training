@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="todo.css" />
+    <title>To-Do App</title>
+  </head>
+  <body>
+    <!-- App Container -->
+    <div id="app">
+      
+      <h1>To-Do App</h1>
+
+      <!-- Input Section -->
+      <section id="task-input-section">
+        <input type="text" id="taskInput" placeholder="Enter task..." />
+
+        <input type="date" id="dueDateInput" />
+
+        <button id="addTaskBtn">Add Task</button>
+      </section>
+
+      <!-- Pending Tasks -->
+      <section id="pending-section">
+        <h2>Pending Tasks</h2>
+        <ul id="pendingList"></ul>
+      </section>
+
+      <!-- Completed Tasks -->
+      <section id="completed-section">
+        <h2>Completed Tasks</h2>
+        <ul id="completedList"></ul>
+      </section>
+    </div>
+
+    <script src="todo.js" defer></script>
+  </body>
+</html>

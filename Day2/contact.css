@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+    align-items: center;
+    border: 2px solid black;
+    width: 200px;
+}
+
+
+.item-btn{
+    transition: 0.3s;
+}
+.item-btn:hover{
+    background-color: blueviolet;
+}

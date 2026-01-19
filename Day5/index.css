@@ -1,0 +1,21 @@
+body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 50px;
+    }
+#div{
+    position: relative;
+    margin-left: 25rem;
+    width: fit-content;
+    background-color: chocolate;
+}
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+    }
+    #message {
+      margin-top: 10px;
+      color: red;
+      font-weight: bold;
+    }

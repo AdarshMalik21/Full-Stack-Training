@@ -1,0 +1,141 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    padding: 20px;
+}
+
+/* App Container */
+#app {
+    max-width: 600px;
+    margin: auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+#app h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Input Section */
+#task-input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+#taskInput,
+#dueDateInput {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#addTaskBtn {
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background-color: #4caf50;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+#addTaskBtn:hover {
+    background-color: #43a047;
+}
+
+/* Sections */
+#pending-section,
+#completed-section {
+    margin-top: 20px;
+}
+
+#pending-section h2,
+#completed-section h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Lists */
+#pendingList,
+#completedList {
+    list-style: none;
+}
+
+/* Task Item */
+#pendingList li,
+#completedList li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+
+/* Task Text */
+#pendingList li span:first-child,
+#completedList li span:first-child {
+    flex: 1;
+    font-size: 14px;
+}
+
+/* Due Date */
+#pendingList li span:nth-child(2),
+#completedList li span:nth-child(2) {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Buttons */
+.complete-btn,
+.delete-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.complete-btn {
+    color: #4caf50;
+}
+
+.delete-btn {
+    color: #e53935;
+}
+
+/* Completed Task Style */
+#completedList li span:first-child {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Overdue Task (JS will add this class) */
+.overdue {
+    border-left: 4px solid #e53935;
+    background-color: #fff5f5;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    #task-input-section {
+        flex-direction: column;
+    }
+
+    #addTaskBtn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,56 @@
+body {
+  font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+  background-image: url(backgroundimg.jpg);
+  color: #000000;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  
+  
+}
+.portfolio_name{
+  font-size: 28px;
+}
+nav{
+  align-self: center;
+  
+}
+a{
+  display: inline-block;
+  color: black
+}
+
+a:hover{
+  border: 2px solid #228B22;
+  border-radius: 10px;
+  padding: 2px 6px;
+  color:blanchedalmond
+}
+main{
+  display: flex;
+  justify-content: space-between;
+  height: 300px;
+  margin: 10px;
+
+}
+section{
+  flex-grow:1;
+}
+img{
+  margin-left: 100px;
+  border-radius: 50%;
+}
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+footer_para{
+  align-self: center;
+}
