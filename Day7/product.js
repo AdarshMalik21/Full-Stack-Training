@@ -100,6 +100,8 @@ function sortProducts(order){
 
 function renderProd(products){
     const container = document.getElementById("productContainer");
+    
+
     container.innerHTML = "";
     container.className = currentView + "-view";    
     products.forEach(product =>{
