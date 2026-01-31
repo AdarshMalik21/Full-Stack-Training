@@ -1,6 +1,6 @@
 function Cart({ cartData }) {
   const { cart, increase, decrease, remove } = cartData;
-
+console.log(cart);
   if (cart.length === 0) {
     return <p>Cart is empty</p>;
   }
