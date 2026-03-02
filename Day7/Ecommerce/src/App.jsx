@@ -1,24 +1,44 @@
-import Product from './components/Products'
-import Header from './components/Header'
-import './App.css'
-import { Route, Routes } from 'react-router-dom'
-import WishList from '../src/components/WishList'
-import Cart from './components/Cart'
-import useCart from './customHooks/useCart';
+import Product from "./components/Products";
+import Header from "./components/Header";
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import WishList from "../src/components/WishList";
+import Cart from "./components/Cart";
+import Registration from "./components/Registration";
+import { ProtectedRoute } from "./components/ProtectedRoute";
+import Login from "./components/Login";
+// import useCart from './customHooks/useCart';
 
 function App() {
-  const cartData = useCart();
+  // const cartData = useCart();
 
   return (
     <>
-      <Header cartData={cartData} />
+      <Header />
+
       <Routes>
-        <Route path='/' element={<Product cardData={cartData} />} />
-        <Route path='wish' element={<WishList />} />
-        <Route path='cart' element={<Cart cartData={cartData} />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Registration />} />
+        <Route path="/" element={<Product />} />
+        <Route
+          path="wish"
+          element={
+            <ProtectedRoute>
+              <WishList />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="cart"
+          element={
+            <ProtectedRoute>
+              <Cart />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,5 +1,13 @@
-function Cart({ cartData }) {
-  const { cart, increase, decrease, remove } = cartData;
+import {useDispatch, useSelector} from 'react-redux'
+import { increase, decrease, remove } from '../redux-card/cartSlice'
+
+
+
+
+function Cart() {
+  const cart = useSelector(state => state.products)
+  const dispatch = useDispatch();
+  // const { cart, increase, decrease, remove } = cartData;
 console.log(cart);
   if (cart.length === 0) {
     return <p>Cart is empty</p>;
@@ -23,9 +31,9 @@ console.log(cart);
           <p>Price: ₹{item.price}</p>
           <p>Quantity: {item.quantity}</p>
 
-          <button onClick={() => increase(item.id)}>+</button>
-          <button onClick={() => decrease(item.id)}>-</button>
-          <button onClick={() => remove(item.id)}>Remove</button>
+          <button onClick={() => dispatch(increase(item.id))}>+</button>
+          <button onClick={() => dispatch(decrease(item.id))}>-</button>
+          <button onClick={() => dispatch(remove(item.id))}>Remove</button>
         </div>
       ))}
 

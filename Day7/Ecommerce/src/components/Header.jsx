@@ -1,10 +1,12 @@
 import {useContext} from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { WishlistContext } from '../WishListContext'
+import { useSelector } from 'react-redux'
 
-const Header = ({ cartData }) => {
+const Header = () => {
+  const cartItems = useSelector(state => state.products || [])
   const {wishList = []} = useContext(WishlistContext)
-  const cartCount = cartData?.cart?.reduce((sum, item) => sum + item.quantity, 0) || 0;
+  const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0)
   return (
     <header className="w-full bg-white shadow-sm">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
