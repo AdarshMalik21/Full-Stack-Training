@@ -4,7 +4,7 @@ import { WishlistContext } from '../WishListContext'
 import { useSelector } from 'react-redux'
 
 const Header = () => {
-  const cartItems = useSelector(state => state.products || [])
+  const cartItems = useSelector(state => state.cart.products || [])
   const {wishList = []} = useContext(WishlistContext)
   const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0)
   return (

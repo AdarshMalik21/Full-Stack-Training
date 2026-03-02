@@ -1,14 +1,11 @@
-import {useDispatch, useSelector} from 'react-redux'
-import { increase, decrease, remove } from '../redux-card/cartSlice'
-
-
-
+import { useDispatch, useSelector } from "react-redux";
+import { increase, decrease, remove } from "../redux-card/cartSlice";
 
 function Cart() {
-  const cart = useSelector(state => state.products)
+  const cart = useSelector((state) => state.cart.products);
   const dispatch = useDispatch();
   // const { cart, increase, decrease, remove } = cartData;
-console.log(cart);
+  console.log(cart);
   if (cart.length === 0) {
     return <p>Cart is empty</p>;
   }
@@ -16,7 +13,7 @@ console.log(cart);
   let totalItems = 0;
   let totalPrice = 0;
 
-  cart.forEach(item => {
+  cart.forEach((item) => {
     totalItems += item.quantity;
     totalPrice += item.price * item.quantity;
   });
@@ -25,8 +22,11 @@ console.log(cart);
     <div>
       <h2>My Cart</h2>
 
-      {cart.map(item => (
-        <div key={item.id} style={{ border: "1px solid #ccc", margin: "10px", padding: "10px" }}>
+      {cart.map((item) => (
+        <div
+          key={item.id}
+          style={{ border: "1px solid #ccc", margin: "10px", padding: "10px" }}
+        >
           <p>{item.name}</p>
           <p>Price: ₹{item.price}</p>
           <p>Quantity: {item.quantity}</p>
